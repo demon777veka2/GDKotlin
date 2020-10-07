@@ -140,6 +140,7 @@ fun main() {
 
         var cifr = 0
 
+
         for (l in mass.indices) {
             val inf = mass[l].split("".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
 
