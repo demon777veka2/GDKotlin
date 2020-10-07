@@ -3,40 +3,22 @@ import java.util.*
 fun main() {
 
     //работа с текстом(задание 6)
-    var words1 =  readLine().toString().split(" ")
-    var words: Array<String> = emptyArray<String>()
 
-    if("echo"==words1[0]){
+    var words: Array<String> = readLine().toString().split(" ").toTypedArray()
 
-        words += ""
-
-        for(j in 1..words1.size - 3){
-            words += words1[j]
-        }
-
+    if ("echo" == words[0]) {
         words[1] = words[1].substring(1)
 
         var hgf: String = words[words.size - 1]
         words[words.size - 1] = hgf.substring(0, hgf.length - 1)
-
-    }else {
-        for(p in 0..words1.size-1){
-            words += words1[p]
-
-        }
     }
 
     println()
     println("Задание 1")
     println("Результат:")
 
-
-
-
-
-    for ( i in 1..words.size-1)
-    {
-       println(words[i])
+    for (i in 1..words.size - 1) {
+        println(words[i])
     }
 
 
@@ -45,12 +27,12 @@ fun main() {
     println("Результат:")
 
     var mass: Array<String> = emptyArray<String>()
-    for (i in 1..words.size-1) {
+    for (i in 1..words.size - 1) {
         mass += words[i]
     }
 
     mass.sort()
-    for ( f in 0..mass.size-1) {
+    for (f in 0..mass.size - 1) {
         println(mass[f])
     }
 
@@ -59,22 +41,22 @@ fun main() {
     System.out.println("Результат:")
     mass = emptyArray<String>()
 
-    for (i in 1..words.size-1) {
+    for (i in 1..words.size - 1) {
         mass += words[i]
     }
 
     mass.sort()
 
-    for (f in 0..mass.size-1) {
-        for (g in f+1..mass.size-1) {
-          if (mass[f] == mass[g]) {
+    for (f in 0..mass.size - 1) {
+        for (g in f + 1..mass.size - 1) {
+            if (mass[f] == mass[g]) {
                 mass[g] = ""
-          }
+            }
         }
     }
 
-    for ( h in 0..mass.size-1) {
-        if (mass[h]!=""){
+    for (h in 0..mass.size - 1) {
+        if (mass[h] != "") {
             println(mass[h])
         }
     }
@@ -84,27 +66,27 @@ fun main() {
     println("Результат:")
     mass = emptyArray<String>()
 
-    for (i in 1..words.size-1) {
-        mass += words[i]+" 1"
+    for (i in 1..words.size - 1) {
+        mass += words[i] + " 1"
     }
 
     mass.sort()
 
-    for (f in 0..mass.size-1) {
+    for (f in 0..mass.size - 1) {
         var koll: Int = 1
-        for (g in f+1..mass.size-1) {
+        for (g in f + 1..mass.size - 1) {
             if (mass[f] == mass[g]) {
                 mass[g] = ""
                 koll++
             }
         }
-        if (mass[f]!=""){
-            mass[f] = mass[f].substring(0, mass[f].length - 1) +koll;
+        if (mass[f] != "") {
+            mass[f] = mass[f].substring(0, mass[f].length - 1) + koll;
         }
     }
 
-    for ( h in 0..mass.size-1) {
-        if (mass[h]!=""){
+    for (h in 0..mass.size - 1) {
+        if (mass[h] != "") {
             println(mass[h])
         }
     }
@@ -113,7 +95,7 @@ fun main() {
     println("Задание 5")
     println("Результат:")
 
-     var max_koll = 1
+    var max_koll = 1
 
     for (i in 1 until words.size) {
         mass[i - 1] = words[i] + " 1"
@@ -187,4 +169,5 @@ fun main() {
     }
 
 }
+
 
