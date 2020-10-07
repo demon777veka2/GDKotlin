@@ -30,6 +30,10 @@ fun main() {
     println("Задание 1")
     println("Результат:")
 
+
+
+
+
     for ( i in 1..words.size-1)
     {
        println(words[i])
