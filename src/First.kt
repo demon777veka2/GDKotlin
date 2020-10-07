@@ -1,12 +1,11 @@
 import java.util.*
 
 fun main() {
-    //работа с текстом(задание 6)
+    //Работа с текстом(задание 6)
     val text_mass: Array<String> = readLine().toString().split(" ").toTypedArray()
 
     if ("echo" == text_mass[0]) {
         text_mass[1] = text_mass[1].substring(1)
-
         val simvol: String = text_mass[text_mass.size - 1]
         text_mass[text_mass.size - 1] = simvol.substring(0, simvol.length - 1)
     }
@@ -19,7 +18,6 @@ fun main() {
         println(text_mass[i])
     }
 
-
     println()
     println("Задание 2")
     println("Результат:")
@@ -30,6 +28,7 @@ fun main() {
     }
 
     time_mass_word.sort()
+
     for (f in 0..time_mass_word.size - 1) {
         println(time_mass_word[f])
     }
@@ -37,6 +36,7 @@ fun main() {
     println()
     println("Задание 3")
     println("Результат:")
+
     time_mass_word = emptyArray<String>()
 
     for (i in 1..text_mass.size - 1) {
@@ -62,6 +62,7 @@ fun main() {
     println()
     println("Задание 4")
     println("Результат:")
+
     time_mass_word = emptyArray<String>()
 
     for (i in 1..text_mass.size - 1) {
@@ -155,7 +156,6 @@ fun main() {
             for (word in list_sort_word) {
                 println(word)
             }
-
         } else if (koll_coincidence == 1) {
             for (word in list_sort_word) {
                 println(word)
