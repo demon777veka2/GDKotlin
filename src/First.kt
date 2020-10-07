@@ -4,12 +4,12 @@ fun main() {
 
     //работа с текстом(задание 6)
 
-    var words: Array<String> = readLine().toString().split(" ").toTypedArray()
+    val words: Array<String> = readLine().toString().split(" ").toTypedArray()
 
     if ("echo" == words[0]) {
         words[1] = words[1].substring(1)
 
-        var hgf: String = words[words.size - 1]
+        val hgf: String = words[words.size - 1]
         words[words.size - 1] = hgf.substring(0, hgf.length - 1)
     }
 
@@ -169,5 +169,3 @@ fun main() {
     }
 
 }
-
-
