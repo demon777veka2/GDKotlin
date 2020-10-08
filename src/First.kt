@@ -1,4 +1,5 @@
 fun main() {
+    println("Введите текст")
     //Работа с текстом(задание 6)
     val text_mass: Array<String> = readLine().toString().split(" ").toTypedArray()
 
