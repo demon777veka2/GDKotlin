@@ -1,5 +1,3 @@
-import java.util.*
-
 fun main() {
     //Работа с текстом(задание 6)
     val text_mass: Array<String> = readLine().toString().split(" ").toTypedArray()
@@ -111,7 +109,7 @@ fun main() {
         time_mass_word[i - 1] = text_mass[i] + " 1"
     }
     //Сортировка массива
-    Arrays.sort(time_mass_word)
+    time_mass_word.sort()
     //Перебор элементов 1 массива для создания уникальности массива и подсчета количества повторпений
     for (f in time_mass_word.indices) {
         //Цифра повторения слова в массиве
@@ -168,7 +166,7 @@ fun main() {
         //Проверка на колличества элементов попавшие под условия "k === cifr_reapet"
         if (koll_coincidence > 1) {
             //Сортировка и вывод элементов
-            Collections.sort(list_sort_word)
+            list_sort_word.sort()
             for (word in list_sort_word) {
                 println(word)
             }
@@ -180,3 +178,4 @@ fun main() {
         }
     }
 }
+
