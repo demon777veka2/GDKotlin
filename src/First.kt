@@ -1,12 +1,16 @@
-fun main(text: Array<String>){
-    println("Введите текст")
-    //Текстом который вы вводите(задание 6)
-    var text1: Array<String> = emptyArray<String>()
-    //if (text.isEmpty())
-   // text = readLine().toString().split(" ").toTypedArray()
-    //Переменная для работы с текстом
-    var text_mass: Array<String> = emptyArray<String>()
+fun main(text1: Array<String>){
 
+    println("Введите текст")
+    var text: Array<String> = emptyArray<String>()
+    //Проверка на ввод текста из вне
+    if (text1.isEmpty()) {
+    text = readLine().toString().split(" ").toTypedArray()
+    }else {
+        text = text1
+    }
+
+    //Массив с текстом для его редактирования
+    var text_mass: Array<String> = emptyArray<String>()
     //Проверка  на содержание в тексте 1 слова "echo"
     if ("echo" == text[0]) {
         //удаление лишних символов из слов массива
