@@ -1,14 +1,22 @@
 fun main() {
     println("Введите текст")
-    //Работа с текстом(задание 6)
-    val text_mass: Array<String> = readLine().toString().split(" ").toTypedArray()
+    //Текстом который вы вводите(задание 6)
+    val text: Array<String> = readLine().toString().split(" ").toTypedArray()
+    //Переменная для работы с текстом
+    var text_mass: Array<String> = emptyArray<String>()
 
     //Проверка  на содержание в тексте 1 слова "echo"
-    if ("echo" == text_mass[0]) {
+    if ("echo" == text[0]) {
         //удаление лишних символов из слов массива
-        text_mass[1] = text_mass[1].substring(1)
-        val simvol: String = text_mass[text_mass.size - 1]
-        text_mass[text_mass.size - 1] = simvol.substring(0, simvol.length - 1)
+        text[1] = text[1].substring(1)
+        val simvol: String = text[text.size - 3]
+        text[text.size - 3] = simvol.substring(0, simvol.length - 1)
+        //Присваивание массиву значения другого массива без 2 последних элементов
+        for (i in 0..text.size - 3) {
+            text_mass += text[i]
+        }
+    }else {
+        text_mass = text
     }
 
     println()
