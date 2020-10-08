@@ -1,7 +1,9 @@
-fun main() {
+fun main(text: Array<String>){
     println("Введите текст")
     //Текстом который вы вводите(задание 6)
-    val text: Array<String> = readLine().toString().split(" ").toTypedArray()
+    var text1: Array<String> = emptyArray<String>()
+    //if (text.isEmpty())
+   // text = readLine().toString().split(" ").toTypedArray()
     //Переменная для работы с текстом
     var text_mass: Array<String> = emptyArray<String>()
 
