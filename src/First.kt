@@ -26,24 +26,15 @@ fun main(args: Array<String>){
 
     //Вывод значений массива
     list.forEach(::println)
-/*
+
     println()
     println("Задание 2")
     println("Результат:")
 
-    //Пустая переменная массива для редактирования
-    var time_mass_word: Array<String> = emptyArray<String>()
-    //Заполнение массива time_mass_word из массива text_mass с 1 элемента
-    for (i in 1..text_mass.size - 1) {
-        time_mass_word += text_mass[i]
-    }
-    //Сортировка массива
-    time_mass_word.sort()
-    //Вывод значений массива
-    for (f in 0..time_mass_word.size - 1) {
-        println(time_mass_word[f])
-    }
-
+    //переменная массива для сортировки массива list
+    val listSort = list.sorted()
+    listSort.forEach(::println)
+/*
     println()
     println("Задание 3")
     println("Результат:")
