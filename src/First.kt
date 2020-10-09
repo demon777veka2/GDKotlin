@@ -51,42 +51,31 @@ fun main(args: Array<String>){
         }
     }
     listUnique.forEach(::println)
-/*
+
     println()
     println("Задание 4")
     println("Результат:")
 
-    //Пустая переменная массива для редактирования
-    time_mass_word = emptyArray<String>()
-    //Заполнение массива time_mass_word из массива text_mass с 1 элемента
-    for (i in 1..text_mass.size - 1) {
-        time_mass_word += text_mass[i] + " 1"
-    }
-    //Сортировка массива
-    time_mass_word.sort()
-    //Перебор элементов 1 массива для создания уникальности массива и подсчета количества повторпений
-    for (f in 0..time_mass_word.size - 1) {
-        //Переменная колличества повторений
-        var koll_coincidence: Int = 1
-        for (g in f + 1..time_mass_word.size - 1) {
-            //проверка на совпадение с подсчетом количества совпадений
-            if (time_mass_word[f] == time_mass_word[g]) {
-                time_mass_word[g] = ""
-                koll_coincidence++
+    var mapCollection: MutableMap<String, Int> = mutableMapOf()
+    var countRepeat: Int = 0
+    //Берем элемент с массива уникальных
+    for (element in listUnique) {
+        countRepeat = 0
+
+        //Считаем количество совпадений с массива listSort
+        for (element1 in listSort) {
+            if (element == element1) {
+                countRepeat++
             }
         }
-        //Присвоение элементу массива колл. совпадений, если он не пустой
-        if (time_mass_word[f] != "") {
-            time_mass_word[f] = time_mass_word[f].substring(0, time_mass_word[f].length - 1) + koll_coincidence;
-        }
+        //Добавляем элемент с количесвтом его повторений в map-коллекцию
+        mapCollection.put(element, countRepeat)
     }
-    //Вывод значений массива
-    for (h in 0..time_mass_word.size - 1) {
-        if (time_mass_word[h] != "") {
-            println(time_mass_word[h])
-        }
+    for (i in mapCollection) {
+        println(i.key + " " + i.value)
     }
 
+    /*
     println()
     println("Задание 5")
     println("Результат:")
