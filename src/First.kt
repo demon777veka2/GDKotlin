@@ -24,12 +24,9 @@ fun main(args: Array<String>){
     println("Задание 1")
     println("Результат:")
 
-    /*
     //Вывод значений массива
-    for (i in 1..text_mass.size - 1) {
-        println(text_mass[i])
-    }
-
+    list.forEach(::println)
+/*
     println()
     println("Задание 2")
     println("Результат:")
