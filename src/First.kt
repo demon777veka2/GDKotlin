@@ -31,37 +31,27 @@ fun main(args: Array<String>){
     println("Задание 2")
     println("Результат:")
 
-    //переменная массива для сортировки массива list
+    //Переменная массива для сортировки массива list
     val listSort = list.sorted()
     listSort.forEach(::println)
-/*
+
     println()
     println("Задание 3")
     println("Результат:")
 
-    //Пустая переменная массива для редактирования
-    time_mass_word = emptyArray<String>()
-    //Заполнение массива time_mass_word из массива text_mass с 1 элемента
-    for (i in 1..text_mass.size - 1) {
-        time_mass_word += text_mass[i]
-    }
-    //Сортировка массива
-    time_mass_word.sort()
-    //Перебор элементов 1 массива для создания уникальности массива
-    for (f in 0..time_mass_word.size - 1) {
-        for (g in f + 1..time_mass_word.size - 1) {
-            if (time_mass_word[f] == time_mass_word[g]) {
-                time_mass_word[g] = ""
-            }
-        }
-    }
-    //Вывод значений массива
-    for (h in 0..time_mass_word.size - 1) {
-        if (time_mass_word[h] != "") {
-            println(time_mass_word[h])
-        }
-    }
+    //Массив для уникальных значений элементов
+    val listUnique: MutableList<String> = mutableListOf()
+    var check1: Boolean = true
 
+    //Проверка на уникальность переменных с добавление в массив listUnique
+    for (element in listSort) {
+        check1 = !listUnique.contains(element)
+        if (check1) {
+            listUnique.add(element)
+        }
+    }
+    listUnique.forEach(::println)
+/*
     println()
     println("Задание 4")
     println("Результат:")
