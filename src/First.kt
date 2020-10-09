@@ -1,10 +1,10 @@
-fun main(args: Array<String>){
+fun main(args: Array<String>) {
 
     println("Введите текст")
     // если через параметр ничего не пришло, передаем новые значения через ReadLine
-    var list: Array<String> =  if(args.isEmpty()) {
-     readLine().toString().split(" ").toTypedArray()
-    }else {
+    var list: Array<String> = if (args.isEmpty()) {
+        readLine().toString().split(" ").toTypedArray()
+    } else {
         args
     }
 
@@ -15,9 +15,9 @@ fun main(args: Array<String>){
         list[list.size - 3] = list[list.size - 3].substring(0, list[list.size - 3].length - 1)
 
         //Уменьшаем массиву длину массива убирая 1 элемент и 2 последних элемента
-        list = list.sliceArray(1..list.size-3)
-    }else {
-        list = list.sliceArray(1..list.size-1)
+        list = list.sliceArray(1..list.size - 3)
+    } else {
+        list = list.sliceArray(1..list.size - 1)
     }
 
     println()
@@ -41,7 +41,7 @@ fun main(args: Array<String>){
 
     //Массив для уникальных значений элементов
     val listUnique: MutableList<String> = mutableListOf()
-    var check1: Boolean = true
+    var check1: Boolean
 
     //Проверка на уникальность переменных с добавление в массив listUnique
     for (element in listSort) {
@@ -56,7 +56,7 @@ fun main(args: Array<String>){
     println("Задание 4")
     println("Результат:")
 
-    var mapCollection: MutableMap<String, Int> = mutableMapOf()
+    val mapCollection: MutableMap<String, Int> = mutableMapOf()
     var countRepeat: Int = 0
     //Берем элемент с массива уникальных
     for (element in listUnique) {
@@ -75,7 +75,6 @@ fun main(args: Array<String>){
         println(i.key + " " + i.value)
     }
 
-
     println()
     println("Задание 5")
     println("Результат:")
@@ -85,5 +84,6 @@ fun main(args: Array<String>){
     for (i in result) {
         println(i.key + " " + i.value)
     }
+
 }
 
