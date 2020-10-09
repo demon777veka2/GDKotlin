@@ -1,34 +1,30 @@
-fun main(text1: Array<String>){
+fun main(args: Array<String>){
 
     println("Введите текст")
-    var text: Array<String> = emptyArray<String>()
-    //Проверка на ввод текста из вне
-    if (text1.isEmpty()) {
-    text = readLine().toString().split(" ").toTypedArray()
+    // если через параметр ничего не пришло, передаем новые значения через ReadLine
+    var list: Array<String> =  if(args.isEmpty()) {
+     readLine().toString().split(" ").toTypedArray()
     }else {
-        text = text1
+        args
     }
 
-    //Массив с текстом для его редактирования
-    var text_mass: Array<String> = emptyArray<String>()
     //Проверка  на содержание в тексте 1 слова "echo"
-    if ("echo" == text[0]) {
-        //удаление лишних символов из слов массива
-        text[1] = text[1].substring(1)
-        val simvol: String = text[text.size - 3]
-        text[text.size - 3] = simvol.substring(0, simvol.length - 1)
-        //Присваивание массиву значения другого массива без 2 последних элементов
-        for (i in 0..text.size - 3) {
-            text_mass += text[i]
-        }
+    if ("echo" == list[0]) {
+        //удаление кавычек(") из слов
+        list[1] = list[1].substring(1)
+        list[list.size - 3] = list[list.size - 3].substring(0, list[list.size - 3].length - 1)
+
+        //Уменьшаем массиву длину массива убирая 1 элемент и 2 последних элемента
+        list = list.sliceArray(1..list.size-3)
     }else {
-        text_mass = text
+        list = list.sliceArray(1..list.size-1)
     }
 
     println()
     println("Задание 1")
     println("Результат:")
 
+    /*
     //Вывод значений массива
     for (i in 1..text_mass.size - 1) {
         println(text_mass[i])
@@ -192,5 +188,7 @@ fun main(text1: Array<String>){
             }
         }
     }
+
+     */
 }
 
