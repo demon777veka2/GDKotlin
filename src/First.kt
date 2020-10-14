@@ -56,21 +56,8 @@ fun main(args: Array<String>) {
     println("Задание 4")
     println("Результат:")
 
-    val mapCollection: MutableMap<String, Int> = mutableMapOf()
-    var countRepeat: Int = 0
-    //Берем элемент с массива уникальных
-    for (element in listUnique) {
-        countRepeat = 0
+    val mapCollection = listSort.groupingBy { it }.eachCount()
 
-        //Считаем количество совпадений с массива listSort
-        for (element1 in listSort) {
-            if (element == element1) {
-                countRepeat++
-            }
-        }
-        //Добавляем элемент с количесвтом его повторений в map-коллекцию
-        mapCollection.put(element, countRepeat)
-    }
     for (i in mapCollection) {
         println(i.key + " " + i.value)
     }
