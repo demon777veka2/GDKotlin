@@ -39,18 +39,8 @@ fun main(args: Array<String>) {
     println("Задание 3")
     println("Результат:")
 
-    //Массив для уникальных значений элементов
-    val listUnique: MutableList<String> = mutableListOf()
-    var check1: Boolean
-
-    //Проверка на уникальность переменных с добавление в массив listUnique
-    for (element in listSort) {
-        check1 = !listUnique.contains(element)
-        if (check1) {
-            listUnique.add(element)
-        }
-    }
-    listUnique.forEach(::println)
+    //Вывод уникальных значений элементов
+    listSort.distinct().forEach(::println)
 
     println()
     println("Задание 4")
