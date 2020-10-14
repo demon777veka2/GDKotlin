@@ -32,21 +32,20 @@ fun main(args: Array<String>) {
     println("Результат:")
 
     //Переменная массива для сортировки массива list
-    val listSort = list.sorted()
-    listSort.forEach(::println)
+    list.sorted().forEach(::println)
 
     println()
     println("Задание 3")
     println("Результат:")
 
     //Вывод уникальных значений элементов
-    listSort.distinct().forEach(::println)
+    list.sorted().distinct().forEach(::println)
 
     println()
     println("Задание 4")
     println("Результат:")
 
-    val mapCollection = listSort.groupingBy { it }.eachCount()
+    val mapCollection = list.sorted().groupingBy { it }.eachCount()
 
     for (i in mapCollection) {
         println(i.key + " " + i.value)
