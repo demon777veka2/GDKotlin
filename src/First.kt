@@ -11,8 +11,8 @@ fun main(args: Array<String>) {
     //Проверка  на содержание в тексте 1 слова "echo"
     if ("echo" == list[0]) {
         //удаление кавычек(") из слов
-        list[1] = list[1].substring(1)
-        list[list.size - 3] = list[list.size - 3].substring(0, list[list.size - 3].length - 1)
+        list[1] = list[1].replace("\"", "", true)
+        list[list.size - 3] = list[list.size - 3].replace("\"", "", true)
 
         //Уменьшаем массиву длину массива убирая 1 элемент и 2 последних элемента
         list = list.sliceArray(1..list.size - 3)
